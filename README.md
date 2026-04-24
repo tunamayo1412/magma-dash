@@ -9,6 +9,35 @@
 - ゲーム制作のためのプログラミングスキルを身につけるために、ゲームを1週間で制作するというコンセプトのイベントである「Unity1週間ゲームジャム」に参加しました
 - お題「あつい」を基にどのようなゲームを作れるか考えた結果、Minecraftにおいてマグマの上にある足場を転々と走り抜けるアスレチックを思い出し、それに似たゲームを制作しようと考えました
 - 自然なランダムマップ生成のためにパーリンノイズを用いました
+```C#:MapCreator.cs
+    void MapCreate() {
+        parent = new GameObject("Enpty object");
+        parent.AddComponent<ParentScript>();
+        parent.transform.position = new Vector3(0, 0, z);
+        z++;
+        for (x = 0; x <= mapX; x++) {
+            GameObject cube;
+            float xSample = (x + random) / relief;
+            float zSample = (z + random) / relief;
+            float perlin = Mathf.PerlinNoise(xSample, zSample);
+            float y = maxHeight * perlin;
+            y = Mathf.Round(y);
+            if (y <= 1f) {
+                cube = Instantiate(magma);
+            } else if(y == 2){
+                cube = Instantiate(rock_1);
+            } else {
+                cube = Instantiate(rock_2);
+                GameObject Crystal = Instantiate(crystal);
+                Crystal.transform.SetParent(parent.transform);
+                Crystal.transform.localPosition = new Vector3(x, y, 0);
+                y -= 1;
+            }
+            cube.transform.SetParent(parent.transform);
+            cube.transform.localPosition = new Vector3(x, y, 0);
+        }
+    }
+```
 
 # ゲーム概要
 - マグマに落ちないようにランダムに生成される足場をジャンプで渡り歩き、スコアアイテムを獲得するゲームです
