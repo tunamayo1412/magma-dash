@@ -10,7 +10,7 @@
 - マグマに落ちないようにランダムに生成される足場をジャンプで渡り歩き、スコアアイテムを獲得するゲームです
 
 # デモ動画
-<img src="https://raw.githubusercontent.com/tunamayo1412/magma-dash/wiki/demo.gif" width="500">
+<img src="https://raw.githubusercontent.com/tunamayo1412/magma-dash/wiki/magmaDash.gif" width="500">
 
 # 環境
 - 開発言語：C#
