@@ -19,7 +19,9 @@
             GameObject cube;
             float xSample = (x + random) / relief;
             float zSample = (z + random) / relief;
+            //ブロックのx座標とz座標をMathf.PerlinNoiseに渡す
             float perlin = Mathf.PerlinNoise(xSample, zSample);
+            //計算した値をmaxHeightにかけた値をブロックのy座標とする
             float y = maxHeight * perlin;
             y = Mathf.Round(y);
             if (y <= 1f) {
