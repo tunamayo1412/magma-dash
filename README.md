@@ -9,7 +9,7 @@
 - ゲーム制作のためのプログラミングスキルを身につけるために、ゲームを1週間で制作するというコンセプトのイベントである「Unity1週間ゲームジャム」に参加しました
 - お題「あつい」を基にどのようなゲームを作れるか考えた結果、Minecraftにおいてマグマの上にある足場を転々と走り抜けるアスレチックを思い出し、それに似たゲームを制作しようと考えました
 - 自然なランダムマップ生成のためにパーリンノイズを用いました
-```C#:MapCreator.cs
+```cs:MapCreator.cs
     void MapCreate() {
         parent = new GameObject("Enpty object");
         parent.AddComponent<ParentScript>();
