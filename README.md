@@ -12,6 +12,7 @@
 
 # デモ動画
 <img src="https://raw.githubusercontent.com/wiki/tunamayo1412/magma-dash/magmaDash.gif" width="500">
+<img src="https://raw.githubusercontent.com/wiki/tunamayo1412/magma-dash/magmaDash_map.gif" width="500">
 
 # 環境
 - 開発言語：C#
